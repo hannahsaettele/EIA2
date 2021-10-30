@@ -1,20 +1,13 @@
     namespace L02_Load {
-        
+        // leider habe ich den Fehler nicht gefunden, weshalb meine html Ausgabe jetzt nicht mehr funktioniert
         window.addEventListener("load", handleLoad);
-
-        let div0: HTMLDivElement;
-        let div1: HTMLDivElement;
-        let span0: HTMLDivElement;
-
-        let xPosition: number;
-        let yPosition: number;
     
         function handleLoad(_event: Event): void {
 
             document.addEventListener("mouse move", setInfoBox);
-            document.querySelector(".div0").addEventListener("click", logInfo);
-            document.querySelector(".div1").addEventListener("click", logInfo);
-            document.querySelector(".div0").addEventListener("keyup", logInfo);
+            document.getElementById(".div0").addEventListener("click", logInfo);
+            document.getElementById(".div1").addEventListener("click", logInfo);
+            document.getElementById(".div0").addEventListener("keyup", logInfo);
             document.querySelector(".div1").addEventListener("keyup", logInfo);
             document.body.addEventListener("click", logInfo);
             document.body.addEventListener("keyup", logInfo);
@@ -23,15 +16,17 @@
         }
 
         function setInfoBox(_event: MouseEvent): void {
-            xPosition = _event.x;
-            yPosition = _event.y;
-            document.getElementById("span0").innerHTML = "Position X: " + xPosition + "Position y" + yPosition;
-            document.getElementById("span0").style.left = _event.x + "px";
-            document.getElementById("span0").style.top = _event.y + "px";
 
-            span0.style.left = xPosition + "px";
-            span0.style.top = yPosition + "px";          
+            let xPosition: number = _event.clientX;
+            let yPosition: number = _event.clientY;
+            let span: HTMLElement = document.getElementById("span");
+
+            span.innerHTML = "x position:" + xPosition + "y position" + yPosition;
+
+            span.style.left = xPosition + "px";
+            span.style.top = yPosition + "px";          
         }
+
         function logInfo (_event: Event): void {
             console.log(_event);
             console.log("Target: " + _event.target);

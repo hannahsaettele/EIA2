@@ -1,16 +1,12 @@
 var L02_Load;
 (function (L02_Load) {
+    // leider habe ich den Fehler nicht gefunden, weshalb meine html Ausgabe jetzt nicht mehr funktioniert
     window.addEventListener("load", handleLoad);
-    var div0;
-    var div1;
-    var span0;
-    var xPosition;
-    var yPosition;
     function handleLoad(_event) {
         document.addEventListener("mouse move", setInfoBox);
-        document.querySelector(".div0").addEventListener("click", logInfo);
-        document.querySelector(".div1").addEventListener("click", logInfo);
-        document.querySelector(".div0").addEventListener("keyup", logInfo);
+        document.getElementById(".div0").addEventListener("click", logInfo);
+        document.getElementById(".div1").addEventListener("click", logInfo);
+        document.getElementById(".div0").addEventListener("keyup", logInfo);
         document.querySelector(".div1").addEventListener("keyup", logInfo);
         document.body.addEventListener("click", logInfo);
         document.body.addEventListener("keyup", logInfo);
@@ -18,13 +14,12 @@ var L02_Load;
         document.addEventListener("keyup", logInfo);
     }
     function setInfoBox(_event) {
-        xPosition = _event.x;
-        yPosition = _event.y;
-        document.getElementById("span0").innerHTML = "Position X: " + xPosition + "Position y" + yPosition;
-        document.getElementById("span0").style.left = _event.x + "px";
-        document.getElementById("span0").style.top = _event.y + "px";
-        span0.style.left = xPosition + "px";
-        span0.style.top = yPosition + "px";
+        var xPosition = _event.clientX;
+        var yPosition = _event.clientY;
+        var span = document.getElementById("span");
+        span.innerHTML = "x position:" + xPosition + "y position" + yPosition;
+        span.style.left = xPosition + "px";
+        span.style.top = yPosition + "px";
     }
     function logInfo(_event) {
         console.log(_event);

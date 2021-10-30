@@ -1,20 +1,20 @@
-.h1{
+#h1{
     text-align: left;
     position: fixed;
 }
 
-.div0 .div1 {
+#div0 #div1 {
     height: 800px;
     width: 400px;
     position: absolute;
     border-color: blueviolet;
 }
 
-.div1 {
+#div1 {
     margin-left: 410px;
 }
 
-.span0 {
+#span0 {
     position: fixed;
     height: 30px;
     width: 100px;
