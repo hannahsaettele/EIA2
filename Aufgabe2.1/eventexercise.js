@@ -1,6 +1,6 @@
 var L02_Load;
 (function (L02_Load) {
-    // leider habe ich den Fehler nicht gefunden, weshalb meine html Ausgabe jetzt nicht mehr funktioniert
+    // leider habe ich den Fehler nicht gefunden, weshalb meine html jetzt nicht mehr funktioniert
     window.addEventListener("load", handleLoad);
     function handleLoad(_event) {
         document.addEventListener("mouse move", setInfoBox);
