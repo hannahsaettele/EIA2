@@ -1,13 +1,19 @@
-#h1{
+h1{
     text-align: left;
     position: fixed;
 }
 
+div {
+    width: 100%;
+    height: 100%;
+    color: black;
+
+}
 #div0 #div1 {
     height: 800px;
     width: 400px;
     position: absolute;
-    border-color: blueviolet;
+    border-color: black;
 }
 
 #div1 {

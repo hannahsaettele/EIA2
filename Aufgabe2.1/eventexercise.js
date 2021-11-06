@@ -1,13 +1,12 @@
 var L02_Load;
 (function (L02_Load) {
-    // leider habe ich den Fehler nicht gefunden, weshalb meine html jetzt nicht mehr funktioniert
     window.addEventListener("load", handleLoad);
     function handleLoad(_event) {
         document.addEventListener("mouse move", setInfoBox);
-        document.getElementById(".div0").addEventListener("click", logInfo);
-        document.getElementById(".div1").addEventListener("click", logInfo);
-        document.getElementById(".div0").addEventListener("keyup", logInfo);
-        document.querySelector(".div1").addEventListener("keyup", logInfo);
+        document.getElementById("div0").addEventListener("click", logInfo);
+        document.getElementById("div1").addEventListener("click", logInfo);
+        document.getElementById("div0").addEventListener("keyup", logInfo);
+        document.querySelector("#div1").addEventListener("keyup", logInfo);
         document.body.addEventListener("click", logInfo);
         document.body.addEventListener("keyup", logInfo);
         document.addEventListener("click", logInfo);
