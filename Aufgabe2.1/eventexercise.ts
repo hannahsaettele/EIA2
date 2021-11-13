@@ -1,36 +1,33 @@
-    namespace L02_Load {
-        
-        window.addEventListener("load", handleLoad);
-    
-        function handleLoad(_event: Event): void {
+namespace L02_Load {
 
-            document.addEventListener("mouse move", setInfoBox);
-            document.getElementById("div0").addEventListener("click", logInfo);
-            document.getElementById("div1").addEventListener("click", logInfo);
-            document.getElementById("div0").addEventListener("keyup", logInfo);
-            document.querySelector("#div1").addEventListener("keyup", logInfo);
-            document.body.addEventListener("click", logInfo);
-            document.body.addEventListener("keyup", logInfo);
-            document.addEventListener("click", logInfo);
-            document.addEventListener("keyup", logInfo);
-        }
+    window.addEventListener("load", handleLoad);
 
-        function setInfoBox(_event: MouseEvent): void {
+    const span: HTMLElement = <HTMLElement>document.querySelector("#span0");
 
-            let xPosition: number = _event.clientX;
-            let yPosition: number = _event.clientY;
-            let span: HTMLElement = document.getElementById("span");
+    function handleLoad(_event: Event): void {
 
-            span.innerHTML = "x position:" + xPosition + "y position" + yPosition;
-
-            span.style.left = xPosition + "px";
-            span.style.top = yPosition + "px";          
-        }
-
-        function logInfo (_event: Event): void {
-            console.log(_event);
-            console.log("Target: " + _event.target);
-            console.log("CurrentTarget: " + _event.currentTarget);  
-            console.log("TypeEvent: " + _event.type);
-        }
+        document.addEventListener("mousemove", setInfoBox);
+        document.body.addEventListener("click", logInfo);
+        document.body.addEventListener("keyup", logInfo);
+        document.addEventListener("click", logInfo);
+        document.addEventListener("keyup", logInfo);
     }
+
+    function setInfoBox(_event: MouseEvent): void {
+
+        let xPosition: number = _event.clientX;
+        let yPosition: number = _event.clientY;
+
+        span.style.left = xPosition.toString() + "px";
+        span.style.top = yPosition.toString() + "px";
+
+        span.innerHTML = "x position:" + xPosition.toString() + "y position" + yPosition.toString();
+    }
+
+    function logInfo(_event: Event): void {
+        console.log(_event);
+        console.log("Target: " + _event.target);
+        console.log("CurrentTarget: " + _event.currentTarget);
+        console.log("TypeEvent: " + _event.type);
+    }
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<title>FormElements</title>
+	<link rel="stylesheet" href="sequenzmem.css" type="text/css" media="screen" />
+	<script src="sequenzmem.js" type="text/javascript" charset="utf-8"></script>
+</head>
+
+<body>
+	<form>
+		<div id="form">
+			<h1>Design your cards</h1>
+			<fieldset id="fsText">
+				<legend> size setting</legend>
+				slid for cards size
+				<input type="range" name="Slider" min="0" max="1" step="0.1" value="0" />
+			</fieldset>
+			<fieldset id="fsText">
+				background color
+				<input type="color" name="BackgroundColor" placeholder="pink" id="color" value="#ff66cc">
+				<hr />
+				card design color
+				<input type="color" name="CardColor" placeholder="pink" id="color" value="#e666ff">
+				<hr />
+				font design color
+				<input type="color" name="FontColor" placeholder="pink" id="color" value="#9a66ff">
+				<hr />
+				<legend> choose your style </legend>
+				<input type="radio" name="Font" value="font1" id="Arial" />
+				<label for="Arial">Arial</label>
+				<input type="radio" name="Font" value="font2" id="Comic" />
+				<label for="Comic">Comic</label>
+				<input type="radio" name="Font" value="font3" id="Courier" />
+				<label for="Courier">Courier</label>
+			</fieldset>
+			<fieldset>
+				<legend>memory word</legend>
+				type in your magic word
+				<input type="text" name="Text" placeholder="type here" required />
+			</fieldset>
+			<fieldset>
+				<legend> time slot </legend>
+				<input type="text" name="Text" placeholder="type here" required />
+			</fieldset>
+		</div>
+	</form>
+	<fieldset>
+		<legend> Are you ready? </legend>
+		start game <button type="button">yesssss</button>
+	</fieldset>
+</body>
+
+</html>
