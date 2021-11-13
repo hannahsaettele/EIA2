@@ -2,6 +2,7 @@
 var SequenzmemoySettings;
 (function (SequenzmemoySettings) {
     window.addEventListener("load", init);
+    // das ist ein Anfang, aus Zeit Gründen habe ich es zur Implementation noch nicht weiter geschafft
     function init(_event) {
         console.log("Init");
         let form = document.querySelector("div#form");

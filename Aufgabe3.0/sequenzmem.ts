@@ -1,6 +1,7 @@
 namespace SequenzmemoySettings {
     window.addEventListener("load", init);
 
+    // das ist ein Anfang, aus Zeit Gründen habe ich es zur Implementation noch nicht weiter geschafft
 
     function init(_event: Event): void {
         console.log("Init");
