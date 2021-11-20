@@ -28,7 +28,7 @@ var Canvas;
             gradient.addColorStop(0.5, "pink");
             gradient.addColorStop(1, "red");
             crc2.fillStyle = gradient;
-            crc2.fillRect(0, 0, 1200, 100);
+            crc2.fillRect(0, 0, 1300, 100);
         }
     }
     function drawCircle(_x, _y, _color, _size) {
