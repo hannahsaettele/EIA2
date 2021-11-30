@@ -36,7 +36,7 @@ namespace Canvas {
             gradient.addColorStop(0.5, "pink");
             gradient.addColorStop(1, "red");
             crc2.fillStyle = gradient;
-            crc2.fillRect(0, 0, 1300, 100);    
+            crc2.fillRect(0, 0, window.innerWidth, 100);    
     }
 
     }
@@ -56,5 +56,4 @@ namespace Canvas {
         crc2.lineWidth = 5;
         crc2.stroke(); 
     }
- 
 }
