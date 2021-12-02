@@ -7,7 +7,7 @@ namespace L09_1_OldMcDonaldsFarm {
 
     let animals: Animal [] = [];
     let stock: Stock [] = [];
-    console.log("start");
+    
     let cow: Animal; 
     let pig: Animal;
     let dog: Animal;
@@ -23,9 +23,9 @@ namespace L09_1_OldMcDonaldsFarm {
     function handleLoad (_event: Event): void {
         console.log("handleLoad");
 
-        cow =  new Animal ("Cow", "Milka", "gras", "2000g", "Muh");
-        pig = new Animal ("Pig", "Liz", "trash", "1000g", "Grunz");
-        dog = new Animal ("Dog", "Rocky", "meet", "500g", "Woof");
+        cow =  new Animal ("Cow", "Milka", "gras", "2000g", "muh");
+        pig = new Animal ("Pig", "Liz", "trash", "1000g", "grunz");
+        dog = new Animal ("Dog", "Rocky", "meet", "500g", "woof");
         horse = new Animal ("Horse", "Schimmel", "carottes", "2000g", "ia");
         chicken = new Animal ("Chicken", "Gustaf", "grains", "500g", "kickeriki");
         animals.push (cow, pig, chicken, dog, horse, chicken);
@@ -36,6 +36,5 @@ namespace L09_1_OldMcDonaldsFarm {
         carottes = new Stock ("carottes", 10000);
         grains = new Stock ("grains", 10000);
         stock.push (gras, trash, meet, carottes, grains);
-  
     }
 }

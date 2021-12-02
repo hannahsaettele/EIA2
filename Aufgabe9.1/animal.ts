@@ -14,18 +14,21 @@ namespace L09_1_OldMcDonaldsFarm {
             this.food = _food;
             this.amountFood = _amountFood;
             this.lyrics = _lyrics;
+    }
 
+    eat(): void {
 
 
     }
 
+    sing (): void {
+        let lyricsDiv: HTMLDivElement;
+        let nameDiv: HTMLDivElement;
+
+        getElementbyId = this.lyrics;
+        nameDiv.innerHTML = this.name;
+        lyricsDiv.innerHTML = this.lyrics;
 
     }
-
-
-
-
-
-
 }
 

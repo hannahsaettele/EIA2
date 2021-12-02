@@ -15,6 +15,15 @@ var L09_1_OldMcDonaldsFarm;
             this.amountFood = _amountFood;
             this.lyrics = _lyrics;
         }
+        eat() {
+        }
+        sing() {
+            let lyricsDiv;
+            let nameDiv;
+            getElementbyId = this.lyrics;
+            nameDiv.innerHTML = this.name;
+            lyricsDiv.innerHTML = this.lyrics;
+        }
     }
     L09_1_OldMcDonaldsFarm.Animal = Animal;
 })(L09_1_OldMcDonaldsFarm || (L09_1_OldMcDonaldsFarm = {}));
