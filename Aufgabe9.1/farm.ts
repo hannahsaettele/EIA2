@@ -2,6 +2,7 @@ namespace L09_1_OldMcDonaldsFarm {
 
     /*Aufgabe: L09.1 OldMcDonaldsFarm, Hannah Sättele, Matrikelnr. 268473, erstellt.: 02.12.21; 
     Quellen: Praktikum: mit MD, AL, Liz & Inverted Classroom*/
+    //Konzept austausch mit Liz H.
 
     window.addEventListener("load", handleLoad); 
 
@@ -21,7 +22,6 @@ namespace L09_1_OldMcDonaldsFarm {
     let grains: Stock;
 
     function handleLoad (_event: Event): void {
-        console.log("handleLoad");
 
         cow =  new Animal ("Cow", "Milka", "gras", "2000g", "muh");
         pig = new Animal ("Pig", "Liz", "trash", "1000g", "grunz");
@@ -36,5 +36,23 @@ namespace L09_1_OldMcDonaldsFarm {
         carottes = new Stock ("carottes", 10000);
         grains = new Stock ("grains", 10000);
         stock.push (gras, trash, meet, carottes, grains);
+        simulateDay();
+    }
+
+    function simulateDay (): void { // ich weiß for of Schleife wäre schöner, kommt vllt noch
+
+        cow.eat(); 
+        pig.eat();
+        dog.eat();
+        horse.eat();
+        chicken.eat();
+
+        cow.sing();
+        pig.sing();
+        dog.sing();
+        horse.sing();
+        chicken.sing();
+        pig.sing();
+
     }
 }

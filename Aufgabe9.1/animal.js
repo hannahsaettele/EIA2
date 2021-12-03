@@ -16,11 +16,12 @@ var L09_1_OldMcDonaldsFarm;
             this.lyrics = _lyrics;
         }
         eat() {
+            let _amountFood;
+            substract(_amountFood);
         }
         sing() {
-            let lyricsDiv;
-            let nameDiv;
-            getElementbyId = this.lyrics;
+            let nameDiv = document.getElementById("name");
+            let lyricsDiv = document.getElementById("lyrics");
             nameDiv.innerHTML = this.name;
             lyricsDiv.innerHTML = this.lyrics;
         }

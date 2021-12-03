@@ -12,9 +12,8 @@ var L09_1_OldMcDonaldsFarm;
             this.showAmount();
         }
         showAmount() {
-            let amountDiv;
-            getElementbyId(this.type);
-            amountDiv.innerHTML(this.amount);
+            let amountDiv = document.getElementById("amount");
+            amountDiv.innerHTML = this.amount.toString();
         }
     }
     L09_1_OldMcDonaldsFarm.Stock = Stock;

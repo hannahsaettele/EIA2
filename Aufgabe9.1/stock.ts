@@ -14,12 +14,8 @@ namespace L09_1_OldMcDonaldsFarm {
         }
 
         showAmount (): void {
-            let amountDiv: HTMLDivElement;
-            getElementbyId (this.type);
-            amountDiv.innerHTML (this.amount);
+            let amountDiv: HTMLDivElement = <HTMLDivElement>document.getElementById("amount");
+            amountDiv.innerHTML = this.amount.toString();  
         }
-
-
     }
-
 }
