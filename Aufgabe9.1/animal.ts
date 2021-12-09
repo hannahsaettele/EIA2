@@ -18,8 +18,8 @@ namespace L09_1_OldMcDonaldsFarm {
 
     eat(): void {
 
-        let _amountFood: ;
-        substract(_amountFood);
+        //let _amountFood: ;
+        //substract(_amountFood);
         
     }
 
