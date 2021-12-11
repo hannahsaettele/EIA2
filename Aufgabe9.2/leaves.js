@@ -41,6 +41,17 @@ var L092_goldenerHerbstClasses;
             L092_goldenerHerbstClasses.crc2.fill();
             L092_goldenerHerbstClasses.crc2.restore();
         }
+        move() {
+            this.position.add(this.velocity);
+            if (this.position.x < 0)
+                this.position.x += L092_goldenerHerbstClasses.crc2.canvas.width;
+            if (this.position.y < 0)
+                this.position.y += L092_goldenerHerbstClasses.crc2.canvas.height;
+            if (this.position.x > L092_goldenerHerbstClasses.crc2.canvas.width)
+                this.position.x -= L092_goldenerHerbstClasses.crc2.canvas.width;
+            if (this.position.y > L092_goldenerHerbstClasses.crc2.canvas.height)
+                this.position.y -= L092_goldenerHerbstClasses.crc2.canvas.height;
+        }
     }
     L092_goldenerHerbstClasses.Leave = Leave;
 })(L092_goldenerHerbstClasses || (L092_goldenerHerbstClasses = {}));

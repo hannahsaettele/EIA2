@@ -46,6 +46,7 @@ namespace L092_goldenerHerbstClasses {
             }
             crc2.restore();
         }
+        
         move(): void {
             this.position.add(this.velocity);
 
