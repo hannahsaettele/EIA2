@@ -7,23 +7,23 @@ namespace L092_goldenerHerbstClasses {
         size: number;
 
 
-        constructor(_size: number, _position?: Vector) {
-            console.log("Leave constructor");
+        constructor(_position?: Vector) {
+            console.log("Leaves constructor");
 
             if (_position)
                 this.position = _position;
             else
-                this.position = new Vector(0, 0);
+                this.position = new Vector((Math.random() * crc2.canvas.width), 100);
 
-            this.velocity = new Vector(0, 0);
-            this.velocity.random(100, 200);
+            this.velocity = new Vector(10, 0);
+
 
             this.type = Math.floor(Math.random() * 4);
-            this.size = _size;
+            this.size = Math.random() * 3;
         }
 
 
-        drawLeave(): void {
+        draw(): void {
             crc2.save();
             crc2.translate(100, 500);
 
