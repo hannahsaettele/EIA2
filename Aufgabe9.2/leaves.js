@@ -6,18 +6,17 @@ var L092_goldenerHerbstClasses;
         velocity;
         type;
         size;
-        constructor(_size, _position) {
-            console.log("Leave constructor");
+        constructor(_position) {
+            console.log("Leaves constructor");
             if (_position)
                 this.position = _position;
             else
-                this.position = new L092_goldenerHerbstClasses.Vector(0, 0);
-            this.velocity = new L092_goldenerHerbstClasses.Vector(0, 0);
-            this.velocity.random(100, 200);
+                this.position = new L092_goldenerHerbstClasses.Vector((Math.random() * L092_goldenerHerbstClasses.crc2.canvas.width), 100);
+            this.velocity = new L092_goldenerHerbstClasses.Vector(10, 0);
             this.type = Math.floor(Math.random() * 4);
-            this.size = _size;
+            this.size = Math.random() * 3;
         }
-        drawLeave() {
+        draw() {
             L092_goldenerHerbstClasses.crc2.save();
             L092_goldenerHerbstClasses.crc2.translate(100, 500);
             L092_goldenerHerbstClasses.crc2.beginPath();

@@ -6,6 +6,7 @@ var L092_goldenerHerbstClasses;
     window.addEventListener("load", handleLoad);
     let golden = 0.62;
     let clouds = [];
+    let leaves = [];
     function handleLoad(_event) {
         let canvas = document.querySelector("canvas");
         if (!canvas)
@@ -41,17 +42,21 @@ var L092_goldenerHerbstClasses;
             oneCloud.draw();
             clouds.push(oneCloud); //array
         }
-        //Blätter erstellen
-        /* for (let i: number = 0; i < 3; i++) {
-             let oneLeave: Leave = new Leave();
-             oneLeave.drawLeave();
-         }*/
+        for (let i = 0; i < 3; i++) {
+            let oneLeave = new L092_goldenerHerbstClasses.Leave();
+            oneLeave.draw();
+            leaves.push(oneLeave);
+        }
     }
     function animate() {
         //putImageData einfügen hintergrund malen
         for (let oneCloud of clouds) {
             oneCloud.move();
             oneCloud.draw();
+        }
+        for (let oneLeave of leaves) {
+            oneLeave.move();
+            oneLeave.draw();
         }
     }
     function drawBackground() {
@@ -197,14 +202,5 @@ var L092_goldenerHerbstClasses;
         }
         L092_goldenerHerbstClasses.crc2.restore();
     }
-    /*Eichhörnchen
-    function drawSquirreli(): void {
-        console.log();
-    }
-
-    //Tannenzapfen
-    function drawFirCone {
-    }
-*/
 })(L092_goldenerHerbstClasses || (L092_goldenerHerbstClasses = {}));
 //# sourceMappingURL=main.js.map
