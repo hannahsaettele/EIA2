@@ -255,15 +255,4 @@ namespace L092_goldenerHerbstClasses {
     }
     crc2.restore();
 
-    }
-
-    /*Eichhörnchen
-    function drawSquirreli(): void {
-        console.log();
-    }
-
-    //Tannenzapfen
-    function drawFirCone {
-    }
-*/
-}
+}}
