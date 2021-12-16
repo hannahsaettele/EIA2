@@ -2,6 +2,32 @@ namespace L092_goldenerHerbstClasses {
     /*Aufgabe: L09.2 Goldener Herbst, Hannah Sättele, Matrikelnr. 268473, erstellt.: 09.12.21; 
     Quellen: Praktikum: mit Alida & Inverted Classroom*/
 
+    /* Die Abhängigkeiten im Klassendiagramm stimmen nicht, sind teilweise falsch herum.
+    Lt. Aufgabenstellung sollten auch Eichhörnchen die Fähigkeit haben sich zu bewegen. 
+    Der Objektknoten in handleLoad sollte zu "install load listener" um die Variablen global und nicht nur in der Funktion anzulegen.
+     Der herumschewebende Objektknoten würde nicht ausgeführt werden, da er weder mit Start- noch Endknoten verknüpft ist.
+     createObjects wird nirgends aufgerufen und würde vollständig funktionieren, wenn die Anzahl der Wolken und Blätter gleich ist,
+     was zwei Parameter an der Stelle unnötig machen würde; zudem fehlt die Bedingung für die Spaltung nach links
+     und rechts beim Entscheidungsknoten, da dort vermutlich keine sein sollte, es sei denn zwei seperate Schleifen sind gedacht;
+     index++ ist eine Aktion und gehört in einen Aktionsknoten. animate wird auch nie aufgerufen,
+     stattdessen fehlt die vom interval aufgerufen update-Funktion. Das Anlegen von oneCloud und oneLeave erzeugt ein neues Objekt,
+     gehört in einen Objektknoten und ist keine Bedingung; dafür fehlt direkt danach eine passende Bedingung nichts zu animieren;
+     cloud ist in animate nicht mehr bekannt, sondern oneCloud, diese kann gemalt und bewegt werden –
+     gleiches für leave (engl. Verlassen, leaf = Blatt); die Reihenfolge währe andersum schöner, erst bewegen, dann malen;
+     das Hintergrundbild wieder zu verwenden um zu vermeiden, dass frühere Positionen der Elemente sichtbar sind,
+     sollte auch berücksichtig werden. Die Parameter der Constructor passen im AD nicht mit den Klassendiagrammen überein.
+     Warum sollen erst die Parameterwerte bei den Constructorn benutzt werden,
+     wenn direkt darauf andere Werte zugeschrieben werden (this.position = _position -> position to 0, 0)?
+     Gibt es bei Leaf.draw je nach type unterschiede in allen Aktionen – würde nur im path vermuten?
+     Dann reicht es den Entscheidungsknoten darum zu positionieren. Was ist composition component in den move-Methoden?
+     Bei der Umsetzung entstehen zwar drei Wolken, ich sehe aber keine Blätter; kann selber nicht ausmachen, warum,
+     weil die Darstellung im debugger spinnt. ImageData schon mal als Kommentar in animate; wenn das Bild vor der Erstellung
+     der beweglichen Elemente in einer globalen Variable gespeichert wird, kann es an der Stelle wieder auf den Canvas 
+     projeziert werden bevor die weiteren Elemente erneut gemalt werden. Bei Cloud wird schönerweise ein optionaler Parameter verwendet.
+     Die size von cloud wird für die Positionen der Partikel verwendet, die scheinen aber entweder zu nah beieinander 
+     (size ist als einziger Multiplikator zu klein für x und y) oder der Radius ist zu groß,
+     statt 20 Partikel kann ich pro Wolke nur ein großes erkennen. Leider gibts keine Eichhörnchen :( Dranbleiben (MD) */
+
 
     window.addEventListener("load", handleLoad);
     export let crc2: CanvasRenderingContext2D;
