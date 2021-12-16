@@ -6,13 +6,6 @@ namespace L10_1_OldMcDonaldsFarm {
         constructor() {
            super("Schimmel", "carottes", "2000g", "ia", "springen");
         }
-
-        doSpecialAction(): void {
-            
-        let nameDiv: HTMLDivElement = <HTMLDivElement>document.getElementById("name"); //zugrief auf id
-        nameDiv.innerHTML += this.talent;
-
-        }
     }
 
 }
