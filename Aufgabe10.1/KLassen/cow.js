@@ -5,10 +5,6 @@ var L10_1_OldMcDonaldsFarm;
         constructor() {
             super("Milka", "gras", "2000g", "muh", "xxx");
         }
-        doSpecialAction() {
-            let nameAnimalDiv = document.getElementById(this.name); //zugrief auf id
-            nameAnimalDiv.innerHTML += this.talent;
-        }
     }
     L10_1_OldMcDonaldsFarm.Cow = Cow;
 })(L10_1_OldMcDonaldsFarm || (L10_1_OldMcDonaldsFarm = {}));

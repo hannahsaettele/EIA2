@@ -5,6 +5,7 @@ namespace L10_1_OldMcDonaldsFarm {
 
         constructor() {
            super("Milka", "gras", "2000g", "muh", "xxx");
+
         }
     }
 

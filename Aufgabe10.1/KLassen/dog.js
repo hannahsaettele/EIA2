@@ -5,10 +5,6 @@ var L10_1_OldMcDonaldsFarm;
         constructor() {
             super("Rocky", "meet", "500g", "woof", "Ballspielen");
         }
-        doSpecialAction() {
-            let nameDiv = document.getElementById("name"); //zugrief auf id
-            nameDiv.innerHTML += this.talent;
-        }
     }
     L10_1_OldMcDonaldsFarm.Dog = Dog;
 })(L10_1_OldMcDonaldsFarm || (L10_1_OldMcDonaldsFarm = {}));
