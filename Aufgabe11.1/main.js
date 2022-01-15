@@ -45,24 +45,17 @@ var L11_1_GoldenerHerbstAdvanced;
     function createObjects() {
         for (let i = 0; i < 3; i++) {
             let oneCloud = new L11_1_GoldenerHerbstAdvanced.Cloud();
-            oneCloud.draw();
             moveables.push(oneCloud); //array
-        }
-        for (let i = 0; i < 3; i++) {
             let oneLeave = new L11_1_GoldenerHerbstAdvanced.Leave();
-            oneLeave.draw();
             moveables.push(oneLeave);
-        }
-        for (let i = 0; i < 3; i++) {
             let oneSquirelli = new L11_1_GoldenerHerbstAdvanced.Squirreli();
-            oneSquirelli.draw();
             moveables.push(oneSquirelli); //array
         }
     }
     function animate() {
         //putImageData einfügen hintergrund malen
         L11_1_GoldenerHerbstAdvanced.crc2.putImageData(background, 0, 0);
-        if (nuts.length > 0) { //malt nur eine Nuss wenn es eine gibt/geklickt wurde 
+        if (nuts.length > 0) {
             for (let oneNut of nuts) {
                 oneNut.draw();
             }

@@ -57,19 +57,12 @@ namespace L11_1_GoldenerHerbstAdvanced {
 
         for (let i: number = 0; i < 3; i++) {
             let oneCloud: Cloud = new Cloud();
-            oneCloud.draw();
             moveables.push(oneCloud); //array
-        }
 
-        for (let i: number = 0; i < 3; i++) {
             let oneLeave: Leave = new Leave();
-            oneLeave.draw();
             moveables.push(oneLeave);
-        }
 
-        for (let i: number = 0; i < 3; i++) {
             let oneSquirelli: Squirreli = new Squirreli();
-            oneSquirelli.draw();
             moveables.push(oneSquirelli); //array
         }
 
@@ -81,7 +74,7 @@ namespace L11_1_GoldenerHerbstAdvanced {
         //putImageData einfügen hintergrund malen
         crc2.putImageData(background, 0, 0);
 
-        if (nuts.length > 0) { //malt nur eine Nuss wenn es eine gibt/geklickt wurde 
+        if (nuts.length > 0) {
             for (let oneNut of nuts) {
                 oneNut.draw();
             }
