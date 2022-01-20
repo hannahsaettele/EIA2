@@ -10,11 +10,11 @@ var L11_1_GoldenerHerbstAdvanced;
             this.position = new L11_1_GoldenerHerbstAdvanced.Vector((Math.random() * L11_1_GoldenerHerbstAdvanced.crc2.canvas.width), 100);
             this.velocity = new L11_1_GoldenerHerbstAdvanced.Vector(10, 0);
             this.type = Math.floor(Math.random() * 4);
-            this.size = Math.random() * 3;
+            this.size = 50;
         }
         draw() {
             let nParticles = 20;
-            let radiusParticle = 50;
+            let radiusParticle = 10;
             let particle = new Path2D();
             let gradient = L11_1_GoldenerHerbstAdvanced.crc2.createRadialGradient(0, 0, 0, 0, 0, radiusParticle);
             particle.arc(0, 0, radiusParticle, 0, 2 * Math.PI);

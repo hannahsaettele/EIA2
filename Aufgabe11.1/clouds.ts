@@ -14,13 +14,13 @@ namespace L11_1_GoldenerHerbstAdvanced {
 
 
             this.type = Math.floor(Math.random() * 4);
-            this.size = Math.random() * 3;
+            this.size = 50;
         }
 
         draw(): void {
 
             let nParticles: number = 20;
-            let radiusParticle: number = 50;
+            let radiusParticle: number = 10;
             let particle: Path2D = new Path2D();
             let gradient: CanvasGradient = crc2.createRadialGradient(0, 0, 0, 0, 0, radiusParticle);
 
