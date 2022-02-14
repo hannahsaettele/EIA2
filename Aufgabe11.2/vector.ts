@@ -2,6 +2,70 @@ namespace L11_2_GoldenerHerbstFinale {
     
     export class Vector {
         x: number;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
         y: number;
 
         constructor(_x: number, _y: number) {
